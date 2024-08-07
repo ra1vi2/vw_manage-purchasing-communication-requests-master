@@ -1,0 +1,44 @@
+{
+	"fileName": "id_1626760663493_171_renameField",
+	"fileType": "change",
+	"changeType": "renameField",
+	"moduleName": "",
+	"reference": "vwks.nlp.s2p.mm.commreq.manage.Component",
+	"packageName": "$TMP",
+	"content": {
+		"originalControlType": "sap.ui.comp.smartform.GroupElement"
+	},
+	"selector": {
+		"id": "vwks.nlp.s2p.mm.commreq.manage::sap.suite.ui.generic.template.ObjectPage.view.Details::xVWKSxNLP_PCF_C_HEADER--idRefDocNoLinkGroupElement",
+		"idIsLocal": false
+	},
+	"layer": "VENDOR",
+	"texts": {
+		"fieldLabel": {
+			"value": "{i18n>RefDocNoLabel}",
+			"type": "XFLD"
+		}
+	},
+	"namespace": "apps/vwks.nlp.s2p.mm.commreq.manage/changes/",
+	"projectId": "vwks.nlp.s2p.mm.commreq.manage",
+	"creation": "2021-07-20T05:57:51.289Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.78.9",
+		"sourceChangeFileName": "",
+		"compositeCommand": ""
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "1.0.0",
+		"from": "1.0.0",
+		"to": "1.0.0"
+	},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns="sap.m">
+	<l:VerticalLayout id="idCommVerticalLayout" class="sapUiContentPadding" width="100%">
+		<l:content>
+			<FeedInput id="idCommFeedInput" post="onCommunicationFeedPost" showIcon="false" visible="{ui>/editable}"/>
+			<List id="idCommFeedList" showSeparators="Inner" items="{ path : 'to_PcfComments', sorter : { path : 'CreatedAt', descending : 'true' }}"
+				visible="{path: 'ui>/editable', formatter: '.formatter.commentsListVisibility'}" noDataText="{i18n>NoComments}">
+				<CustomListItem>
+					<HBox>
+						<Avatar backgroundColor="{path:'UserType', formatter:'.formatter.avatarFormatter'}" initials="{RecipientInitials}" displaySize="S"
+							imageFitType="Cover" tooltip="{parts: [{path:'FullName'},{path:'Email'}], formatter: '.formatter.formatTooltip'}" displayShape="Circle"
+							press="onSenderDetailPress" class="sapUiTinyMarginTop sapUiTinyMarginBegin"/>
+						<FeedListItem id="idCommFeedListItem" sender="{FullName}" senderActive="false" showIcon="false"
+							timestamp="{path: 'CreatedAt', type: 'sap.ui.model.type.DateTime'}" text="{Comments}" convertLinksToAnchorTags="All"/>
+					</HBox>
+				</CustomListItem>
+			</List>
+		</l:content>
+	</l:VerticalLayout>
+</core:FragmentDefinition>

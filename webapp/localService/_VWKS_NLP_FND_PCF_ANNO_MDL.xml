@@ -1,0 +1,153 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="Org.OData.Capabilities.V1"/></edmx:Reference>
+	<edmx:Reference Uri="../../../vwks/nlp_fnd_pcf_srv/$metadata"><edmx:Include Namespace="NLP_FND_PCF_SRV" Alias="SAP"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="com.sap.vwks.nlp_fnd_pcf_anno_mdl.v1">
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_MTM_C_EmployeeBP_VHType/IsBusinessPurposeCompleted"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_MTM_C_EmployeeBP_VHType/AuthorizationGroup"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/ActiveUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/Preparation_ac"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/Validation_ac"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/ActiveUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/PcfKey"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/KeyLink"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/SourcingProjectID_FC"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/CentralContractID_FC"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/QuotationID_FC"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/PurchaseRequisitionID_FC"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/PurchaseOrderID_FC"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/Activation_ac"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/Edit_ac"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/Preparation_ac"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/Validation_ac"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType">
+				<Annotation Term="UI.DataPoint" Qualifier="ChangedAt">
+					<Record><PropertyValue Property="Value" Path="ChangedAt"/><PropertyValue Property="Title" String="Last Changed On"/><PropertyValue Property="TargetValue" Path="ChangedAt"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="CreatedAt">
+					<Record><PropertyValue Property="Value" Path="CreatedAt"/><PropertyValue Property="Title" String="Created On"/><PropertyValue Property="TargetValue" Path="CreatedAt"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="ReqIDs">
+					<Record><PropertyValue Property="Value" Path="PcfRequestID"/><PropertyValue Property="Title" String="PCF Request ID"/><PropertyValue Property="TargetValue" Path="PcfRequestID"/></Record>
+				</Annotation>
+				<Annotation Term="UI.HeaderFacets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="ID" String="CreatedAt"/><PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#CreatedAt"/></Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="ID" String="ChangedAt"/><PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#ChangedAt"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Header Attributes"/><PropertyValue Property="ID" String="Header"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Purchaser Communication Form"/><PropertyValue Property="TypeNamePlural" String="Purchaser Communication Forms"/>
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PcfRequestID"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PcfRequestID"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PcfRequestType"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Material"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="CreatedBy"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="CompanyCode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Plant"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ReferenceDocumentType"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="SourcingProjectID"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="CentralContractID"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="QuotationID"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PurchaseRequisitionID"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PurchaseOrderID"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Priority"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Status"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ResponsiblePurchaser"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Quantity"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PcfRequestID"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PcfRequestType"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Material"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="CreatedBy"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="CompanyCode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Plant"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ReferenceDocumentType"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="SourcingProjectID"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="CentralContractID"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="QuotationID"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PurchaseRequisitionID"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PurchaseOrderID"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Priority"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Status"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ResponsiblePurchaser"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Quantity"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/Email"><Annotation Term="Communication.IsEmailAddress"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/ActiveUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/Preparation_ac"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/Validation_ac"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType">
+				<Annotation Term="Communication.Contact">
+					<Record>
+						<PropertyValue Property="email">
+							<Collection>
+								<Record><PropertyValue Property="address" Path="Email"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftUUID"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftEntityType"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftAccessType"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/ProcessingStartDateTime"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftIsKeptByUser"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/EnqueueStartDateTime"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftIsCreatedByMe"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftIsLastChangedByMe"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftIsProcessedByMe"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/CreatedByUserDescription"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/LastChangedByUserDescription"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/InProcessByUserDescription"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="_Entities">
+				<Annotation Term="Org.OData.Capabilities.V1.BatchSupport">
+					<Record Type="Org.OData.Capabilities.V1.BatchSupportType"><PropertyValue Property="ReferencesAcrossChangeSetsSupported" Bool="true"/></Record>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

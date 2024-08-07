@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns:core='sap.ui.core' xmlns="sap.m">
+	<ResponsivePopover id="idInvolvedPeopleColorInfoPopover" contentWidth="15rem" title="{i18n>InvolvedPeopleColorInfo}" class="sapUiPopupWithPadding"
+		placement="HorizontalPreferredLeft">
+		<VBox>
+			<HBox id="idRequesterHBox" alignItems="Center">
+				<Avatar class="sapUiTinyMarginEnd" tooltip="{i18n>Requester}" displaySize="Custom" customDisplaySize="1.75rem" backgroundColor="Accent1"></Avatar>
+				<Label id="idRequesterLabel" text="{i18n>Requester}"/>
+			</HBox>
+			<HBox id="idResponsiblePurchaserHBox" alignItems="Center">
+				<Avatar id="idResponsiblePurchaserAvatar" class="sapUiTinyMarginEnd" tooltip="{i18n>ResponsiblePurchaser}" displaySize="Custom" customDisplaySize="1.75rem"
+					backgroundColor="Accent8"></Avatar>
+				<Label id="idResponsiblePurchaserLabel" text="{i18n>ResponsiblePurchaser}"/>
+			</HBox>
+			<HBox id="idNonSpecifiedRoleHBox" alignItems="Center">
+				<Avatar id="idNonSpecifiedRoleAvatar" class="sapUiTinyMarginEnd" tooltip="{i18n>NonSpecifiedRole}" displaySize="Custom" customDisplaySize="1.75rem" backgroundColor="Accent6"></Avatar>
+				<Label id="idNonSpecifiedRoleLabel" text="{i18n>NonSpecifiedRole}"/>
+			</HBox>
+		</VBox>
+	</ResponsivePopover>
+</core:FragmentDefinition>

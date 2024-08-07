@@ -1,0 +1,316 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='X31205')/$value">
+		<edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+	</edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='X31205')/$value">
+		<edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+	</edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='X31205')/$value">
+		<edmx:Include Namespace="Org.OData.Capabilities.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="../../../vwks/nlp_fnd_pcf_srv/$metadata">
+		<edmx:Include Namespace="NLP_FND_PCF_SRV" Alias="SAP"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="com.sap.vwks.nlp_fnd_pcf_anno_mdl.v1">
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_BP_VHType/IsBusinessPurposeCompleted">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_BP_VHType/AuthorizationGroup">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/HasDraftEntity">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/ActiveUUID">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/DraftEntityCreationDateTime">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/DraftEntityLastChangeDateTime">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/HasActiveEntity">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/IsActiveEntity">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/CommentsKey">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/Preparation_ac">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType/Validation_ac">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/HasDraftEntity">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/ActiveUUID">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/DraftEntityCreationDateTime">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/DraftEntityLastChangeDateTime">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/HasActiveEntity">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/IsActiveEntity">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/PcfKey">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/KeyLink">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/Activation_ac">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/Edit_ac">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/Pcf_close_conv_ac">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/Pcf_send_ac">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/Preparation_ac">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/Reopen_ac">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType/Validation_ac">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/Email">
+				<Annotation Term="Communication.IsEmailAddress"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/HasDraftEntity">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/ActiveUUID">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/DraftEntityCreationDateTime">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/DraftEntityLastChangeDateTime">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/HasActiveEntity">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/IsActiveEntity">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/Preparation_ac">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/Validation_ac">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType">
+				<Annotation Term="Communication.Contact">
+					<Record>
+						<PropertyValue Property="email">
+							<Collection>
+								<Record>
+									<PropertyValue Property="address" Path="Email"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_QUOTATION_VHType/SourcingProjectQuotationUUID">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_SRC_PROJ_VHType/SourcingProjectUUID">
+				<Annotation Term="UI.HiddenFilter"/>
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.C_CntrlPurContrMaterialVHType/OpnCtlgItemID">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.C_CntrlPurContrMaterialVHType/Language">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.C_CntrlPurContrMaterialVHType/CompanyCode">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.C_CntrlPurContrMaterialVHType/OpnCtlgWebServiceID">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.C_CntrlPurContrMaterialVHType/IsBusinessPurposeCompleted">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.C_ProcmtHubCntrlContrPurgGrpVHType/ProcurementHubSourceSystem">
+				<Annotation Term="UI.HiddenFilter"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.C_ProcmtHubCompanyCodeVHType/ProcurementHubSourceSystem">
+				<Annotation Term="UI.HiddenFilter"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.C_ProcmtHubPlantVHType/ProcurementHubSourceSystem">
+				<Annotation Term="UI.HiddenFilter"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftUUID">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftEntityType">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftAccessType">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/ProcessingStartDateTime">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftIsKeptByUser">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/EnqueueStartDateTime">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftIsCreatedByMe">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftIsLastChangedByMe">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/DraftIsProcessedByMe">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/CreatedByUserDescription">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/LastChangedByUserDescription">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType/InProcessByUserDescription">
+				<Annotation Term="UI.Hidden"/>
+			</Annotations>
+			<Annotations Target="_Entities">
+				<Annotation Term="Org.OData.Capabilities.V1.BatchSupport">
+					<Record Type="Org.OData.Capabilities.V1.BatchSupportType">
+						<PropertyValue Property="ReferencesAcrossChangeSetsSupported" Bool="true"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType">
+				<Annotation Term="Common.SideEffects" Qualifier="MaterialChanged">
+					<Record Type="Common.SideEffectsType">
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>Material</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<PropertyPath>MaterialDescription</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="Common.SideEffects" Qualifier="PurchasingGroupCompanyCodeChanged">
+					<Record Type="Common.SideEffectsType">
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>PurchasingGroup</PropertyPath>
+								<PropertyPath>CompanyCode</PropertyPath>
+								<PropertyPath>Material</PropertyPath>
+								<PropertyPath>ReferenceDocumentNo</PropertyPath>
+								<PropertyPath>ResponsiblePurchaser</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>to_PcfPeople</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="Common.SideEffects" Qualifier="PurchasingroupChanged">
+					<Record Type="Common.SideEffectsType">
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>PurchasingGroup</PropertyPath>
+								<PropertyPath>Material</PropertyPath>
+								<PropertyPath>ReferenceDocumentNo</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<PropertyPath>ResponsiblePurchaser</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="Common.SideEffects" Qualifier="RefDocumentNumberCompanycodeChanged">
+					<Record Type="Common.SideEffectsType">
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>ReferenceDocumentNo</PropertyPath>
+								<PropertyPath>Material</PropertyPath>
+								<PropertyPath>CompanyCode</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<PropertyPath>PurchasingGroup</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+                <Annotation Term="Common.SideEffects" Qualifier="MaterialCompanycodeChanged">
+					<Record Type="Common.SideEffectsType">
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>Material</PropertyPath>
+								<PropertyPath>CompanyCode</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<PropertyPath>LeadPurchasingGroup</PropertyPath>
+                                <PropertyPath>LocalPurchasingGroup</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

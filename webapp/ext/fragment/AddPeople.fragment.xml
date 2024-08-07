@@ -1,0 +1,19 @@
+<core:FragmentDefinition id="AddPeople" xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Dialog id="idAddPeopleDialog" title="{i18n>AddPeopleTitle}" showHeader="true" draggable="true" contentWidth="400px">
+		<VBox id="AddPeopleVbox" class="sapUiSmallMargin">
+			<Label id="idBPLabel" text="{i18n>BusinessPartner}:" labelFor="idBusinessPartner"/>
+			<Input value="{peopleData>/BusinessPartner}" id="idBusinessPartner" valueHelpRequest="onValueHelpRequest" showValueHelp="true"
+				class="sapUiSmallMarginBottom" valueHelpOnly="true" showTableSuggestionValueHelp="false" showSuggestion="false" filterSuggests="false"/>
+			<Label id="idFullNameLabel" text="{i18n>FullName}:" labelFor="idFullName"/>
+			<Text id="idFullName" class="sapUiSmallMarginBottom" text="{peopleData>/FullName}"></Text>
+			<Label id="idDepartmentLabel" text="{i18n>Department}:" labelFor="idDepartment"/>
+			<Text id="idDepartment" text="{peopleData>/Department}" class="sapUiSmallMarginBottom"></Text>
+			<Label id="idEmailLabel" text="{i18n>EmailID}:" labelFor="idEmail"/>
+			<Text id="idEmail" text="{peopleData>/EmailID}" class="sapUiSmallMarginBottom"></Text>
+		</VBox>
+		<buttons>
+			<Button id="idCreateMeetingOK" text="{@i18n>Ok}" press="onBusinessPartnerOk"/>
+			<Button text="{@i18n>Close}" press="handleCloseAddPeopleDialog"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

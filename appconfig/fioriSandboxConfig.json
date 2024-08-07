@@ -1,0 +1,9 @@
+{
+  "applications": {
+    "vwks.nlp.s2p.mm.pmaterial.manage-display": {
+      "additionalInformation": "SAPUI5.Component=vwks.nlp.s2p.mm.pmaterial.manage",
+      "applicationType": "URL",
+      "url": "../resources/vwks.nlp.s2p.mm.pmaterial.manage"
+    }
+  }
+}

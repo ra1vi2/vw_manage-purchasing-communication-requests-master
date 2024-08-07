@@ -1,0 +1,61 @@
+specVersion: "2.4"
+metadata:
+  name: vwks.nlp.s2p.mm.commreq.manage
+type: application
+framework:
+  name: SAPUI5
+  version: 1.101.1
+  libraries:
+    - name: sap.suite.ui.generic.template
+    - name: sap.ui.core
+    - name: sap.ui.generic.app
+    - name: sap.m
+    - name: sap.ushell
+    - name: sap.collaboration
+    - name: sap.f
+    - name: sap.ui.comp
+    - name: sap.ui.table
+    - name: themelib_sap_bluecrystal
+    - name: themelib_sap_fiori_3
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: false
+        backend:
+          - path: /sap
+            url: http://n1t.onprem:1234
+            client: "100"
+            destination: n1t_100
+          - path: webapp/resources/vwks/nlp/s2p/mm/reuse/lib
+            destination: X31
+            url: ""
+            pathPrefix: /sap/bc/ui5_ui5/vwks/nlp_reuse_lib/vwks/nlp/s2p/mm/reuse/lib/
+          - path: /webapp/resources/sap/se/mi/plm/lib/attachmentservice
+            destination: X31
+            url: ""
+            pathPrefix: /sap/bc/ui5_ui5/sap/plm_ath_cres1/
+          - path: /webapp/resources/sap/s4h/cfnd/featuretoggle
+            destination: X31
+            url: ""
+            pathPrefix: /sap/bc/ui5_ui5/sap/featuretoggles1/
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+        delay: 300
+    - name: fiori-tools-preview
+      afterMiddleware: fiori-tools-appreload
+      configuration:
+        component: vwks.nlp.s2p.mm.commreq.manage
+        ui5Theme: sap_fiori_3
+    - name: fiori-tools-servestatic
+      afterMiddleware: compression
+      configuration:
+        paths:
+          - path: /resources/vwks.nlp.s2p.mm.pmaterial.manage
+            src: ../manage-p-materials/webapp
+          - path: /appconfig
+            src: appconfig

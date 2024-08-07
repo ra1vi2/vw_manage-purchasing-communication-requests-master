@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:smarttable="sap.ui.comp.smarttable" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:core="sap.ui.core">
+	<Dialog id="idDialogPeopleVH" contentWidth="80%" contentHeight="60%" horizontalScrolling="false" verticalScrolling="true">
+		<VBox id="idVBoxDialogPeopleVH" fitContainer="true">
+			<smartFilterBar:SmartFilterBar id="idPeopleValueHelpSmartFilterBar" entitySet="xVWKSxNLP_PCF_C_BP_VH" useToolbar="false"
+				showFilterConfiguration="false"></smartFilterBar:SmartFilterBar>
+			<smarttable:SmartTable id="idPeopleValueHelpSmartTable" header="{@i18n>BusinessPartner}" tableType="ResponsiveTable"
+				entitySet="xVWKSxNLP_PCF_C_BP_VH" class="sapUiResponsiveContentPadding"
+				requestAtLeastFields="BusinessPartner,UserID" enableAutoBinding="true" useExportToExcel="false" useVariantManagement="false"
+				useTablePersonalisation="false"></smarttable:SmartTable>
+		</VBox>
+		<buttons>
+			<Button id="idOkButton" type="Emphasized" text="{@i18n>Ok}" press="onValueHelpOk"/>			
+			<Button id="idCloseButton" text="{@i18n>Close}" press="onValueHelpClose"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

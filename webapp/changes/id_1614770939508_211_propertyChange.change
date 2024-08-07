@@ -1,0 +1,37 @@
+{
+	"fileName": "id_1614770939508_211_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"moduleName": "",
+	"reference": "vwks.nlp.s2p.mm.commreq.manage.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "visible",
+		"newValue": false
+	},
+	"selector": {
+		"id": "vwks.nlp.s2p.mm.commreq.manage::sap.suite.ui.generic.template.ObjectPage.view.Details::xVWKSxNLP_PCF_C_HEADER--Second::PurchasingGroup::GroupElement",
+		"type": "sap.ui.comp.smartform.GroupElement",
+		"idIsLocal": false
+	},
+	"layer": "VENDOR",
+	"texts": {},
+	"namespace": "apps/vwks.nlp.s2p.mm.commreq.manage/changes/",
+	"projectId": "vwks.nlp.s2p.mm.commreq.manage",
+	"creation": "2021-03-03T11:29:01.649Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "sap.ui.rta FlexCommand",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.86.3",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "property"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

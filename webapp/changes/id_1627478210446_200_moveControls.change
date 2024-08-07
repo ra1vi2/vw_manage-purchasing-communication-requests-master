@@ -1,0 +1,75 @@
+{
+	"fileName": "id_1627478210446_200_moveControls",
+	"fileType": "change",
+	"changeType": "moveControls",
+	"moduleName": "",
+	"reference": "vwks.nlp.s2p.mm.commreq.manage.Component",
+	"packageName": "$TMP",
+	"content": {
+		"movedElements": [{
+			"selector": {
+				"id": "vwks.nlp.s2p.mm.commreq.manage::sap.suite.ui.generic.template.ObjectPage.view.Details::xVWKSxNLP_PCF_C_HEADER--idSendRequestButton",
+				"idIsLocal": false
+			},
+			"sourceIndex": 0,
+			"targetIndex": 4
+		}],
+		"source": {
+			"selector": {
+				"aggregation": "content",
+				"type": "sap.m.OverflowToolbar",
+				"id": "vwks.nlp.s2p.mm.commreq.manage::sap.suite.ui.generic.template.ObjectPage.view.Details::xVWKSxNLP_PCF_C_HEADER--template::ObjectPage::FooterToolbar",
+				"idIsLocal": false
+			}
+		},
+		"target": {
+			"selector": {
+				"aggregation": "content",
+				"type": "sap.m.OverflowToolbar",
+				"id": "vwks.nlp.s2p.mm.commreq.manage::sap.suite.ui.generic.template.ObjectPage.view.Details::xVWKSxNLP_PCF_C_HEADER--template::ObjectPage::FooterToolbar",
+				"idIsLocal": false
+			}
+		}
+	},
+	"selector": {
+		"id": "vwks.nlp.s2p.mm.commreq.manage::sap.suite.ui.generic.template.ObjectPage.view.Details::xVWKSxNLP_PCF_C_HEADER--template::ObjectPage::FooterToolbar",
+		"idIsLocal": false
+	},
+	"layer": "VENDOR",
+	"texts": {},
+	"namespace": "apps/vwks.nlp.s2p.mm.commreq.manage/changes/",
+	"projectId": "vwks.nlp.s2p.mm.commreq.manage",
+	"creation": "2021-07-28T13:16:54.441Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.78.9",
+		"sourceChangeFileName": "",
+		"compositeCommand": ""
+	},
+	"oDataInformation": {},
+	"dependentSelector": {
+		"source": {
+			"id": "vwks.nlp.s2p.mm.commreq.manage::sap.suite.ui.generic.template.ObjectPage.view.Details::xVWKSxNLP_PCF_C_HEADER--template::ObjectPage::FooterToolbar",
+			"idIsLocal": false
+		},
+		"target": {
+			"id": "vwks.nlp.s2p.mm.commreq.manage::sap.suite.ui.generic.template.ObjectPage.view.Details::xVWKSxNLP_PCF_C_HEADER--template::ObjectPage::FooterToolbar",
+			"idIsLocal": false
+		},
+		"movedElements": [{
+			"id": "vwks.nlp.s2p.mm.commreq.manage::sap.suite.ui.generic.template.ObjectPage.view.Details::xVWKSxNLP_PCF_C_HEADER--idSendRequestButton",
+			"idIsLocal": false
+		}]
+	},
+	"validAppVersions": {
+		"creation": "1.0.0",
+		"from": "1.0.0",
+		"to": "1.0.0"
+	},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

@@ -1,0 +1,310 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://ldcix31.wdf.sap.corp:44311/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://ldcix31.wdf.sap.corp:44311/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://ldcix31.wdf.sap.corp:44311/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://ldcix31.wdf.sap.corp:44311/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://ldcix31.wdf.sap.corp:44311/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://ldcix31.wdf.sap.corp:44311/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://ldcix31.wdf.sap.corp:44311/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://ldcix31.wdf.sap.corp:44311/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://ldcix31.wdf.sap.corp:44311/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="VWKS.NLP_FND_PCF_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="xVWKSxNLP_MTM_C_EmployeeBP_VHType" sap:label="Search Help for Business Partner" sap:value-list="true"
+				sap:content-version="1">
+				<Key><PropertyRef Name="BusinessPartner"/></Key><Property Name="BusinessPartner" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase"
+					sap:label="Business Partner"/><Property Name="FirstName" Type="Edm.String" MaxLength="40" sap:label="First name"/><Property Name="LastName" Type="Edm.String" MaxLength="40" sap:label="Last name"/><Property Name="FullName" Type="Edm.String" MaxLength="81" sap:label="Full Name"/><Property Name="IsBusinessPurposeCompleted" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Purpose Completed"/><Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Authorization Group"/></EntityType>
+			<EntityType Name="xVWKSxNLP_PCF_C_COMMENTSType" sap:label="Consumption View PCF Comments" sap:content-version="1">
+				<Key><PropertyRef Name="CommentsKey"/><PropertyRef Name="IsActiveEntity"/></Key><Property Name="Preparation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Validation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="CommentsKey" Type="Edm.Guid" Nullable="false" sap:label="PCF Comments Key" sap:creatable="false" sap:updatable="false"/><Property Name="PcfKey" Type="Edm.Guid" sap:label="PCF Key" sap:creatable="false" sap:updatable="false"/><Property Name="Comments" Type="Edm.String" sap:label="String"/><Property Name="CreatedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="Created On"/><Property Name="CreatedBy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Created By"/><Property Name="ChangedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="Last Changed On"/><Property Name="ChangedBy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Changed By"/><Property Name="HasDraftEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has Draft" sap:creatable="false"
+					sap:updatable="false"/><Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key" sap:creatable="false" sap:updatable="false"/><Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Created On" sap:creatable="false"
+					sap:updatable="false"/><Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Last Changed On"
+					sap:creatable="false" sap:updatable="false"/><Property Name="HasActiveEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has active" sap:creatable="false"
+					sap:updatable="false"/><Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" sap:display-format="UpperCase" sap:label="Is active"
+					sap:creatable="false" sap:updatable="false"/><NavigationProperty Name="DraftAdministrativeData" Relationship="VWKS.NLP_FND_PCF_SRV.assoc_B01835DAC862CBCCBFAF531A3FD16F8D"
+					FromRole="FromRole_assoc_B01835DAC862CBCCBFAF531A3FD16F8D" ToRole="ToRole_assoc_B01835DAC862CBCCBFAF531A3FD16F8D"/><NavigationProperty Name="SiblingEntity" Relationship="VWKS.NLP_FND_PCF_SRV.assoc_D8528669D6709537869968A94AF71681"
+					FromRole="FromRole_assoc_D8528669D6709537869968A94AF71681" ToRole="ToRole_assoc_D8528669D6709537869968A94AF71681"/><NavigationProperty Name="to_PcfHeader" Relationship="VWKS.NLP_FND_PCF_SRV.assoc_CFD88AFD2401372505E4771D8DC2956F"
+					FromRole="ToRole_assoc_CFD88AFD2401372505E4771D8DC2956F" ToRole="FromRole_assoc_CFD88AFD2401372505E4771D8DC2956F"/></EntityType>
+			<EntityType Name="xVWKSxNLP_PCF_C_HEADERType" sap:label="Consumption View PCF Header" sap:content-version="1">
+				<Key><PropertyRef Name="PcfKey"/><PropertyRef Name="IsActiveEntity"/></Key><Property Name="Activation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Edit_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/><Property Name="Preparation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Validation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="PcfKey" Type="Edm.Guid" Nullable="false" sap:label="PCF Key" sap:creatable="false" sap:updatable="false"/><Property Name="KeyLink" Type="Edm.Int64" sap:label="Key Link" sap:creatable="false" sap:updatable="false"/><Property Name="PcfDescription" Type="Edm.String" MaxLength="60" sap:label="PCF Description"/><Property Name="PcfRequestID" Type="Edm.String" MaxLength="10" sap:display-format="NonNegative" sap:label="PCF Request ID"
+					sap:creatable="false" sap:updatable="false"/><Property Name="PcfRequestType" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Request Type"/><Property Name="Material" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:text="MaterialDescription"
+					sap:label="Material"/><Property Name="MaterialDescription" Type="Edm.String" MaxLength="40" sap:label="Material description" sap:creatable="false"
+					sap:updatable="false"/><Property Name="CompanyCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Company Code"/><Property Name="Plant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plant"/><Property Name="ReferenceDocumentType" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Plant"/><Property Name="SourcingProjectID" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Plant"/><Property Name="SourcingProjectID_FC" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="CentralContractID" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Central Contract"/><Property Name="CentralContractID_FC" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="QuotationID" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Quotation"/><Property Name="QuotationID_FC" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="PurchaseRequisitionID" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Purchase Requisition"/><Property Name="PurchaseRequisitionID_FC" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="PurchaseOrderID" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Purchase Order"/><Property Name="PurchaseOrderID_FC" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Priority" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Priority"/><Property Name="ResponsiblePurchaser" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Responsible Buyer"/><Property Name="PurchaserID" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Business Partner"/><Property Name="Quantity" Type="Edm.String" MaxLength="20" sap:label="Quantity"/><Property Name="Status" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Status"/><Property Name="PmatIndicator" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="P-Mat Indicator"/><Property Name="CreatedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="CreatedAt"/><Property Name="CreatedBy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Created By"/><Property Name="ChangedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="Changed At"/><Property Name="ChangedBy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Changed By"/><Property Name="HasDraftEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has Draft" sap:creatable="false"
+					sap:updatable="false"/><Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key" sap:creatable="false" sap:updatable="false"/><Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Created On" sap:creatable="false"
+					sap:updatable="false"/><Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Last Changed On"
+					sap:creatable="false" sap:updatable="false"/><Property Name="HasActiveEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has active" sap:creatable="false"
+					sap:updatable="false"/><Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" sap:display-format="UpperCase" sap:label="Is active"
+					sap:creatable="false" sap:updatable="false"/><NavigationProperty Name="DraftAdministrativeData" Relationship="VWKS.NLP_FND_PCF_SRV.assoc_F34A304844BE0759B02FF8D08FD296B1"
+					FromRole="FromRole_assoc_F34A304844BE0759B02FF8D08FD296B1" ToRole="ToRole_assoc_F34A304844BE0759B02FF8D08FD296B1"/><NavigationProperty Name="SiblingEntity" Relationship="VWKS.NLP_FND_PCF_SRV.assoc_42D6951DD75F41233E7088C0CB3F0797"
+					FromRole="FromRole_assoc_42D6951DD75F41233E7088C0CB3F0797" ToRole="ToRole_assoc_42D6951DD75F41233E7088C0CB3F0797"/><NavigationProperty Name="to_PcfComments" Relationship="VWKS.NLP_FND_PCF_SRV.assoc_CFD88AFD2401372505E4771D8DC2956F"
+					FromRole="FromRole_assoc_CFD88AFD2401372505E4771D8DC2956F" ToRole="ToRole_assoc_CFD88AFD2401372505E4771D8DC2956F"/><NavigationProperty Name="to_PcfPeople" Relationship="VWKS.NLP_FND_PCF_SRV.assoc_5BC30960445A036F55DF492AF5F10824"
+					FromRole="FromRole_assoc_5BC30960445A036F55DF492AF5F10824" ToRole="ToRole_assoc_5BC30960445A036F55DF492AF5F10824"/></EntityType>
+			<EntityType Name="xVWKSxNLP_PCF_C_PEOPLEType" sap:label="Consumption View PCF Involved People" sap:content-version="1">
+				<Key><PropertyRef Name="RecipientKey"/><PropertyRef Name="IsActiveEntity"/></Key><Property Name="Preparation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Validation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="RecipientKey" Type="Edm.Guid" Nullable="false" sap:label="PCF Recipient Key" sap:creatable="false" sap:updatable="false"/><Property Name="PcfKey" Type="Edm.Guid" sap:label="PCF Key" sap:creatable="false" sap:updatable="false"/><Property Name="UserType" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="PCF User Type"/><Property Name="Partner" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Business Partner"
+					sap:value-list="standard"/><Property Name="UserID" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="User"/><Property Name="FullName" Type="Edm.String" MaxLength="80" sap:label="Full Name"/><Property Name="Department" Type="Edm.String" MaxLength="40" sap:label="Department"/><Property Name="Email" Type="Edm.String" MaxLength="241" sap:label="E-Mail Address" sap:semantics="email"/><Property Name="CreatedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="Created On"/><Property Name="CreatedBy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Created By"/><Property Name="ChangedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="Last Changed On"/><Property Name="ChangedBy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Changed By"/><Property Name="HasDraftEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has Draft" sap:creatable="false"
+					sap:updatable="false"/><Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key" sap:creatable="false" sap:updatable="false"/><Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Created On" sap:creatable="false"
+					sap:updatable="false"/><Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Last Changed On"
+					sap:creatable="false" sap:updatable="false"/><Property Name="HasActiveEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has active" sap:creatable="false"
+					sap:updatable="false"/><Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" sap:display-format="UpperCase" sap:label="Is active"
+					sap:creatable="false" sap:updatable="false"/><NavigationProperty Name="to_PcfHeader" Relationship="VWKS.NLP_FND_PCF_SRV.assoc_5BC30960445A036F55DF492AF5F10824"
+					FromRole="ToRole_assoc_5BC30960445A036F55DF492AF5F10824" ToRole="FromRole_assoc_5BC30960445A036F55DF492AF5F10824"/><NavigationProperty Name="DraftAdministrativeData" Relationship="VWKS.NLP_FND_PCF_SRV.assoc_F2AF95DB9432AF960BC2BFDAEC7FC756"
+					FromRole="FromRole_assoc_F2AF95DB9432AF960BC2BFDAEC7FC756" ToRole="ToRole_assoc_F2AF95DB9432AF960BC2BFDAEC7FC756"/><NavigationProperty Name="SiblingEntity" Relationship="VWKS.NLP_FND_PCF_SRV.assoc_234D8D8FA1DBC91FC4626E0A11C32BBD"
+					FromRole="FromRole_assoc_234D8D8FA1DBC91FC4626E0A11C32BBD" ToRole="ToRole_assoc_234D8D8FA1DBC91FC4626E0A11C32BBD"/></EntityType>
+			<EntityType Name="I_DraftAdministrativeDataType" sap:label="Draft Administration Data" sap:content-version="1">
+				<Key><PropertyRef Name="DraftUUID"/><PropertyRef Name="DraftEntityType"/></Key><Property Name="DraftUUID" Type="Edm.Guid" Nullable="false" sap:label="Draft (Technical ID)"/><Property Name="DraftEntityType" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase"
+					sap:label="Draft Entity ID"/><Property Name="CreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Created On"/><Property Name="CreatedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="CreatedByUserDescription"
+					sap:label="Draft Created By"/><Property Name="LastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Last Changed On"/><Property Name="LastChangedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="LastChangedByUserDescription"
+					sap:label="Draft Last Changed By"/><Property Name="DraftAccessType" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Draft Access Type"/><Property Name="ProcessingStartDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft In Process Since"/><Property Name="InProcessByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="InProcessByUserDescription"
+					sap:label="Draft In Process By"/><Property Name="DraftIsKeptByUser" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft Is Kept By User"/><Property Name="EnqueueStartDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Locked Since"/><Property Name="DraftIsCreatedByMe" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft Created By Me"/><Property Name="DraftIsLastChangedByMe" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft Last Changed By Me"/><Property Name="DraftIsProcessedByMe" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft In Process By Me"/><Property Name="CreatedByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft Created By (Description)"/><Property Name="LastChangedByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft Last Changed By (Description)"/><Property Name="InProcessByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft In Process By (Description)"/></EntityType>
+			<ComplexType Name="ValidationFunctionResult"><Property Name="IsValid" Type="Edm.Boolean" sap:label="Is valid"/></ComplexType>
+			<Association Name="assoc_D8528669D6709537869968A94AF71681" sap:content-version="1"><End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType" Multiplicity="1" Role="FromRole_assoc_D8528669D6709537869968A94AF71681"/><End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType" Multiplicity="0..1" Role="ToRole_assoc_D8528669D6709537869968A94AF71681"/></Association>
+			<Association Name="assoc_B01835DAC862CBCCBFAF531A3FD16F8D" sap:content-version="1"><End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType" Multiplicity="1" Role="FromRole_assoc_B01835DAC862CBCCBFAF531A3FD16F8D"/><End Type="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType" Multiplicity="0..1" Role="ToRole_assoc_B01835DAC862CBCCBFAF531A3FD16F8D"/></Association>
+			<Association Name="assoc_F34A304844BE0759B02FF8D08FD296B1" sap:content-version="1"><End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType" Multiplicity="1" Role="FromRole_assoc_F34A304844BE0759B02FF8D08FD296B1"/><End Type="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType" Multiplicity="0..1" Role="ToRole_assoc_F34A304844BE0759B02FF8D08FD296B1"/></Association>
+			<Association Name="assoc_42D6951DD75F41233E7088C0CB3F0797" sap:content-version="1"><End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType" Multiplicity="1" Role="FromRole_assoc_42D6951DD75F41233E7088C0CB3F0797"/><End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType" Multiplicity="0..1" Role="ToRole_assoc_42D6951DD75F41233E7088C0CB3F0797"/></Association>
+			<Association Name="assoc_CFD88AFD2401372505E4771D8DC2956F" sap:content-version="1">
+				<End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType" Multiplicity="1" Role="FromRole_assoc_CFD88AFD2401372505E4771D8DC2956F"><OnDelete Action="Cascade"/></End><End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType" Multiplicity="*" Role="ToRole_assoc_CFD88AFD2401372505E4771D8DC2956F"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_assoc_CFD88AFD2401372505E4771D8DC2956F"><PropertyRef Name="PcfKey"/></Principal>
+					<Dependent Role="ToRole_assoc_CFD88AFD2401372505E4771D8DC2956F"><PropertyRef Name="PcfKey"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="assoc_5BC30960445A036F55DF492AF5F10824" sap:content-version="1">
+				<End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType" Multiplicity="1" Role="FromRole_assoc_5BC30960445A036F55DF492AF5F10824"><OnDelete Action="Cascade"/></End><End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType" Multiplicity="*" Role="ToRole_assoc_5BC30960445A036F55DF492AF5F10824"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_assoc_5BC30960445A036F55DF492AF5F10824"><PropertyRef Name="PcfKey"/></Principal>
+					<Dependent Role="ToRole_assoc_5BC30960445A036F55DF492AF5F10824"><PropertyRef Name="PcfKey"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="assoc_F2AF95DB9432AF960BC2BFDAEC7FC756" sap:content-version="1"><End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType" Multiplicity="1" Role="FromRole_assoc_F2AF95DB9432AF960BC2BFDAEC7FC756"/><End Type="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType" Multiplicity="0..1" Role="ToRole_assoc_F2AF95DB9432AF960BC2BFDAEC7FC756"/></Association>
+			<Association Name="assoc_234D8D8FA1DBC91FC4626E0A11C32BBD" sap:content-version="1"><End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType" Multiplicity="1" Role="FromRole_assoc_234D8D8FA1DBC91FC4626E0A11C32BBD"/><End Type="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType" Multiplicity="0..1" Role="ToRole_assoc_234D8D8FA1DBC91FC4626E0A11C32BBD"/></Association>
+			<EntityContainer Name="VWKS_NLP_FND_PCF_SRV_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true"
+				sap:supported-formats="atom json xlsx"><EntitySet Name="xVWKSxNLP_MTM_C_EmployeeBP_VH" EntityType="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_MTM_C_EmployeeBP_VHType" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/><EntitySet Name="xVWKSxNLP_PCF_C_COMMENTS" EntityType="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/><EntitySet Name="xVWKSxNLP_PCF_C_HEADER" EntityType="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType" sap:deletable="false"
+				sap:searchable="true" sap:content-version="1"/><EntitySet Name="xVWKSxNLP_PCF_C_PEOPLE" EntityType="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType" sap:creatable="false"
+				sap:updatable="false" sap:content-version="1"/><EntitySet Name="I_DraftAdministrativeData" EntityType="VWKS.NLP_FND_PCF_SRV.I_DraftAdministrativeDataType" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:addressable="false" sap:content-version="1"/>
+				<AssociationSet Name="assoc_5BC30960445A036F55DF492AF5F10824" Association="VWKS.NLP_FND_PCF_SRV.assoc_5BC30960445A036F55DF492AF5F10824"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="xVWKSxNLP_PCF_C_HEADER" Role="FromRole_assoc_5BC30960445A036F55DF492AF5F10824"/><End EntitySet="xVWKSxNLP_PCF_C_PEOPLE" Role="ToRole_assoc_5BC30960445A036F55DF492AF5F10824"/></AssociationSet>
+				<AssociationSet Name="assoc_B01835DAC862CBCCBFAF531A3FD16F8D" Association="VWKS.NLP_FND_PCF_SRV.assoc_B01835DAC862CBCCBFAF531A3FD16F8D"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="xVWKSxNLP_PCF_C_COMMENTS" Role="FromRole_assoc_B01835DAC862CBCCBFAF531A3FD16F8D"/><End EntitySet="I_DraftAdministrativeData" Role="ToRole_assoc_B01835DAC862CBCCBFAF531A3FD16F8D"/></AssociationSet>
+				<AssociationSet Name="assoc_234D8D8FA1DBC91FC4626E0A11C32BBD" Association="VWKS.NLP_FND_PCF_SRV.assoc_234D8D8FA1DBC91FC4626E0A11C32BBD"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="xVWKSxNLP_PCF_C_PEOPLE" Role="FromRole_assoc_234D8D8FA1DBC91FC4626E0A11C32BBD"/><End EntitySet="xVWKSxNLP_PCF_C_PEOPLE" Role="ToRole_assoc_234D8D8FA1DBC91FC4626E0A11C32BBD"/></AssociationSet>
+				<AssociationSet Name="assoc_42D6951DD75F41233E7088C0CB3F0797" Association="VWKS.NLP_FND_PCF_SRV.assoc_42D6951DD75F41233E7088C0CB3F0797"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="xVWKSxNLP_PCF_C_HEADER" Role="FromRole_assoc_42D6951DD75F41233E7088C0CB3F0797"/><End EntitySet="xVWKSxNLP_PCF_C_HEADER" Role="ToRole_assoc_42D6951DD75F41233E7088C0CB3F0797"/></AssociationSet>
+				<AssociationSet Name="assoc_F2AF95DB9432AF960BC2BFDAEC7FC756" Association="VWKS.NLP_FND_PCF_SRV.assoc_F2AF95DB9432AF960BC2BFDAEC7FC756"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="xVWKSxNLP_PCF_C_PEOPLE" Role="FromRole_assoc_F2AF95DB9432AF960BC2BFDAEC7FC756"/><End EntitySet="I_DraftAdministrativeData" Role="ToRole_assoc_F2AF95DB9432AF960BC2BFDAEC7FC756"/></AssociationSet>
+				<AssociationSet Name="assoc_F34A304844BE0759B02FF8D08FD296B1" Association="VWKS.NLP_FND_PCF_SRV.assoc_F34A304844BE0759B02FF8D08FD296B1"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="xVWKSxNLP_PCF_C_HEADER" Role="FromRole_assoc_F34A304844BE0759B02FF8D08FD296B1"/><End EntitySet="I_DraftAdministrativeData" Role="ToRole_assoc_F34A304844BE0759B02FF8D08FD296B1"/></AssociationSet>
+				<AssociationSet Name="assoc_D8528669D6709537869968A94AF71681" Association="VWKS.NLP_FND_PCF_SRV.assoc_D8528669D6709537869968A94AF71681"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="xVWKSxNLP_PCF_C_COMMENTS" Role="FromRole_assoc_D8528669D6709537869968A94AF71681"/><End EntitySet="xVWKSxNLP_PCF_C_COMMENTS" Role="ToRole_assoc_D8528669D6709537869968A94AF71681"/></AssociationSet>
+				<AssociationSet Name="assoc_CFD88AFD2401372505E4771D8DC2956F" Association="VWKS.NLP_FND_PCF_SRV.assoc_CFD88AFD2401372505E4771D8DC2956F"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="xVWKSxNLP_PCF_C_HEADER" Role="FromRole_assoc_CFD88AFD2401372505E4771D8DC2956F"/><End EntitySet="xVWKSxNLP_PCF_C_COMMENTS" Role="ToRole_assoc_CFD88AFD2401372505E4771D8DC2956F"/></AssociationSet>
+				<FunctionImport Name="xVWKSxNLP_PCF_C_COMMENTSPreparation" ReturnType="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType"
+					EntitySet="xVWKSxNLP_PCF_C_COMMENTS" m:HttpMethod="POST" sap:action-for="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType"
+					sap:applicable-path="Preparation_ac"><Parameter Name="CommentsKey" Type="Edm.Guid" Mode="In"/><Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In"/><Parameter Name="SideEffectsQualifier" Type="Edm.String" Mode="In" Nullable="true"/></FunctionImport>
+				<FunctionImport Name="xVWKSxNLP_PCF_C_COMMENTSValidation" ReturnType="VWKS.NLP_FND_PCF_SRV.ValidationFunctionResult" m:HttpMethod="GET"
+					sap:action-for="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType" sap:applicable-path="Validation_ac"><Parameter Name="CommentsKey" Type="Edm.Guid" Mode="In"/><Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In"/><Parameter Name="SideEffectsQualifier" Type="Edm.String" Mode="In" Nullable="true"/></FunctionImport>
+				<FunctionImport Name="xVWKSxNLP_PCF_C_HEADERActivation" ReturnType="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType"
+					EntitySet="xVWKSxNLP_PCF_C_HEADER" m:HttpMethod="POST" sap:action-for="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType"
+					sap:applicable-path="Activation_ac"><Parameter Name="PcfKey" Type="Edm.Guid" Mode="In"/><Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In"/></FunctionImport>
+				<FunctionImport Name="xVWKSxNLP_PCF_C_HEADEREdit" ReturnType="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType"
+					EntitySet="xVWKSxNLP_PCF_C_HEADER" m:HttpMethod="POST" sap:action-for="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType"
+					sap:applicable-path="Edit_ac"><Parameter Name="PcfKey" Type="Edm.Guid" Mode="In"/><Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In"/><Parameter Name="PreserveChanges" Type="Edm.Boolean" Mode="In" Nullable="true"/></FunctionImport>
+				<FunctionImport Name="xVWKSxNLP_PCF_C_HEADERPreparation" ReturnType="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType"
+					EntitySet="xVWKSxNLP_PCF_C_HEADER" m:HttpMethod="POST" sap:action-for="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType"
+					sap:applicable-path="Preparation_ac"><Parameter Name="PcfKey" Type="Edm.Guid" Mode="In"/><Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In"/><Parameter Name="SideEffectsQualifier" Type="Edm.String" Mode="In" Nullable="true"/></FunctionImport>
+				<FunctionImport Name="xVWKSxNLP_PCF_C_HEADERValidation" ReturnType="VWKS.NLP_FND_PCF_SRV.ValidationFunctionResult" m:HttpMethod="GET"
+					sap:action-for="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType" sap:applicable-path="Validation_ac"><Parameter Name="PcfKey" Type="Edm.Guid" Mode="In"/><Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In"/><Parameter Name="SideEffectsQualifier" Type="Edm.String" Mode="In" Nullable="true"/></FunctionImport>
+				<FunctionImport Name="xVWKSxNLP_PCF_C_PEOPLEPreparation" ReturnType="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType"
+					EntitySet="xVWKSxNLP_PCF_C_PEOPLE" m:HttpMethod="POST" sap:action-for="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType"
+					sap:applicable-path="Preparation_ac"><Parameter Name="RecipientKey" Type="Edm.Guid" Mode="In"/><Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In"/><Parameter Name="SideEffectsQualifier" Type="Edm.String" Mode="In" Nullable="true"/></FunctionImport>
+				<FunctionImport Name="xVWKSxNLP_PCF_C_PEOPLEValidation" ReturnType="VWKS.NLP_FND_PCF_SRV.ValidationFunctionResult" m:HttpMethod="GET"
+					sap:action-for="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType" sap:applicable-path="Validation_ac"><Parameter Name="RecipientKey" Type="Edm.Guid" Mode="In"/><Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In"/><Parameter Name="SideEffectsQualifier" Type="Edm.String" Mode="In" Nullable="true"/></FunctionImport>
+			</EntityContainer>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_HEADER">
+				<Annotation Term="Common.DraftRoot">
+					<Record><PropertyValue Property="ActivationAction" String="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_HEADERActivation"/><PropertyValue Property="EditAction" String="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_HEADEREdit"/><PropertyValue Property="PreparationAction" String="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_HEADERPreparation"/><PropertyValue Property="ValidationFunction" String="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_HEADERValidation"/></Record>
+				</Annotation>
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="NonFilterableProperties">
+							<Collection>
+								<PropertyPath>Activation_ac</PropertyPath>
+								<PropertyPath>Edit_ac</PropertyPath>
+								<PropertyPath>Preparation_ac</PropertyPath>
+								<PropertyPath>Validation_ac</PropertyPath>
+								<PropertyPath>SourcingProjectID_FC</PropertyPath>
+								<PropertyPath>CentralContractID_FC</PropertyPath>
+								<PropertyPath>QuotationID_FC</PropertyPath>
+								<PropertyPath>PurchaseRequisitionID_FC</PropertyPath>
+								<PropertyPath>PurchaseOrderID_FC</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="Capabilities.SortRestrictions">
+					<Record>
+						<PropertyValue Property="NonSortableProperties">
+							<Collection>
+								<PropertyPath>Activation_ac</PropertyPath>
+								<PropertyPath>Edit_ac</PropertyPath>
+								<PropertyPath>Preparation_ac</PropertyPath>
+								<PropertyPath>Validation_ac</PropertyPath>
+								<PropertyPath>SourcingProjectID_FC</PropertyPath>
+								<PropertyPath>CentralContractID_FC</PropertyPath>
+								<PropertyPath>QuotationID_FC</PropertyPath>
+								<PropertyPath>PurchaseRequisitionID_FC</PropertyPath>
+								<PropertyPath>PurchaseOrderID_FC</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_COMMENTS">
+				<Annotation Term="Common.DraftNode">
+					<Record><PropertyValue Property="PreparationAction" String="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_COMMENTSPreparation"/><PropertyValue Property="ValidationFunction" String="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_COMMENTSValidation"/></Record>
+				</Annotation>
+				<Annotation Term="Common.DraftActivationVia">
+					<Collection>
+						<String>VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_HEADER</String>
+					</Collection>
+				</Annotation>
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="NonFilterableProperties">
+							<Collection>
+								<PropertyPath>Preparation_ac</PropertyPath>
+								<PropertyPath>Validation_ac</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record><PropertyValue Property="Property" PropertyPath="Comments"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="Capabilities.SortRestrictions">
+					<Record>
+						<PropertyValue Property="NonSortableProperties">
+							<Collection>
+								<PropertyPath>Preparation_ac</PropertyPath>
+								<PropertyPath>Validation_ac</PropertyPath>
+								<PropertyPath>Comments</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_PEOPLE">
+				<Annotation Term="Common.DraftNode">
+					<Record><PropertyValue Property="PreparationAction" String="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_PEOPLEPreparation"/><PropertyValue Property="ValidationFunction" String="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_PEOPLEValidation"/></Record>
+				</Annotation>
+				<Annotation Term="Common.DraftActivationVia">
+					<Collection>
+						<String>VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities/xVWKSxNLP_PCF_C_HEADER</String>
+					</Collection>
+				</Annotation>
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="NonFilterableProperties">
+							<Collection>
+								<PropertyPath>Preparation_ac</PropertyPath>
+								<PropertyPath>Validation_ac</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="Capabilities.SortRestrictions">
+					<Record>
+						<PropertyValue Property="NonSortableProperties">
+							<Collection>
+								<PropertyPath>Preparation_ac</PropertyPath>
+								<PropertyPath>Validation_ac</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType/Partner">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Search Help for Business Partner"/><PropertyValue Property="CollectionPath" String="xVWKSxNLP_MTM_C_EmployeeBP_VH"/><PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="Partner"/><PropertyValue Property="ValueListProperty" String="BusinessPartner"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="FirstName"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="LastName"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="FullName"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="VWKS.NLP_FND_PCF_SRV.VWKS_NLP_FND_PCF_SRV_Entities"><Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+				<Annotation Term="Aggregation.ApplySupported">
+					<Record>
+						<PropertyValue Property="Transformations">
+							<Collection>
+								<String>aggregate</String>
+								<String>groupby</String>
+								<String>filter</String>
+							</Collection>
+						</PropertyValue><PropertyValue Property="Rollup" EnumMember="None"/></Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_COMMENTSType">
+				<Annotation Term="Common.SemanticKey">
+					<Collection>
+						<PropertyPath>CommentsKey</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_HEADERType">
+				<Annotation Term="Common.SemanticKey">
+					<Collection>
+						<PropertyPath>PcfKey</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="VWKS.NLP_FND_PCF_SRV.xVWKSxNLP_PCF_C_PEOPLEType">
+				<Annotation Term="Common.SemanticKey">
+					<Collection>
+						<PropertyPath>RecipientKey</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="VWKS.NLP_FND_PCF_SRV.VWKS.NLP_FND_PCF_SRV_Entities">
+				<Annotation Term="Org.OData.Capabilities.V1.BatchSupport">
+					<Record Type="Org.OData.Capabilities.V1.BatchSupportType"><PropertyValue Property="ReferencesAcrossChangeSetsSupported" Bool="true"/></Record>
+				</Annotation>
+			</Annotations><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self"
+				href="https://ldcix31.wdf.sap.corp:44311/sap/opu/odata/vwks/NLP_FND_PCF_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="https://ldcix31.wdf.sap.corp:44311/sap/opu/odata/vwks/NLP_FND_PCF_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

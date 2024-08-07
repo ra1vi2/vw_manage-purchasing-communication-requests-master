@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<VBox>
+		<HBox id="idColorinfoHbox" justifyContent="End">
+			<Button id="idColorInfoButton" icon="sap-icon://legend" type="Transparent" tooltip="{i18n>ColorInfo}" press="handleOpenColorInfo"></Button>
+			<Button id="idAddButton"
+				visible="{parts: [{path:'SessionUser'},{path:'PurchaseruserID'},{path:'CreatedBy'},{path:'ui>/editable'}], formatter: '.formatter.showAddIcon'}"
+				text="{i18n>Add}" type="Transparent" tooltip="{i18n>Add}" press="handleOpenAddpeopleDialog"/>
+		</HBox>
+		<HBox id="idPeopleInvolved" alignItems="Center" items="{path : 'to_PcfPeople', sorter : { path : 'UserType' } }">
+			<Avatar id="idFullNameAvatar" backgroundColor="{path:'UserType', formatter:'.formatter.avatarFormatter'}" initials="{RecipientInitials}" displaySize="S"
+				imageFitType="Cover" badgeIcon="{parts: [{path:'ui>/editable'},{path:'DelInd'}], formatter: '.formatter.getBadgeIcon'}"
+				tooltip="{parts: [{path:'FullName'},{path:'Email'}], formatter: '.formatter.formatTooltip'}" displayShape="Circle"
+				press=".onDeletePeople(${DelInd},${ui>/editable},$event)" class="sapUiTinyMarginEnd"/>
+		</HBox>
+	</VBox>
+</core:FragmentDefinition>
